@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HTTP_Request"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="601" Width="1200">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -13,19 +13,19 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal" Grid.Row="0">
-            <TextBox VerticalAlignment="Center" Width="400"></TextBox>
-            <Button Margin="10" Width="100">Search</Button>
+            <TextBox Name="TextSearch" VerticalAlignment="Center" Width="400"></TextBox>
+            <Button Name="Search" Margin="10" Width="100" Click="Search_Click">Search</Button>
 
             <GroupBox Margin="10,0,10,0" Header="System search">
                 <StackPanel Orientation="Horizontal">
-                    <RadioButton IsChecked="True">Google</RadioButton>
-                    <RadioButton Margin="10,0,0,0">Bing</RadioButton>
+                    <RadioButton Name="Google" IsChecked="True" Click="Google_Click">Google</RadioButton>
+                    <RadioButton Name="Bing" Margin="10,0,0,0" Click="Bing_Click">Bing</RadioButton>
                 </StackPanel>
             </GroupBox>
 
-            <CheckBox Margin="10" VerticalAlignment="Center">Image</CheckBox>
+            <CheckBox Name="Image" Margin="10" VerticalAlignment="Center">Image</CheckBox>
         </StackPanel>
 
-        <WebBrowser Grid.Row="1"/>
+        <WebBrowser Name="Browser" Grid.Row="1"/>
     </Grid>
 </Window>
